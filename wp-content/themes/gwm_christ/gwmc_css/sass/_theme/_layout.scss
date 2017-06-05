@@ -1,0 +1,24 @@
+
+.fixed-header{
+	position: fixed;
+	top: 0px;
+	z-index: 999999;
+	padding:10px 40px;
+	.logo-box{
+			float: left;
+			display: inline-block;
+			a.logo-anchor{
+		display: block;
+		
+	}
+		}
+
+	
+	
+}
+
+.carousel-container{
+	position: relative;
+	top: 0px;
+	z-index: 9;
+}
