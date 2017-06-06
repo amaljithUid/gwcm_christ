@@ -4,17 +4,50 @@
 	top: 0px;
 	z-index: 999999;
 	padding:10px 40px;
+	width: 100%;
 	.logo-box{
-			float: left;
-			display: inline-block;
-			a.logo-anchor{
-		display: block;
-		
-	}
-		}
+		float: left;
+		display: inline-block;
+		a.logo-anchor{
+			display: table;
+			min-width: 207px;
+			img{
+				display: inline-block;
+				float: left;
+			}
+			h2{
+				text-transform: uppercase;
+				color: $theme-white;
+				display: table;
+				b{
+					display: block;
+					font-size: $default-font-size*2;
+						
+				}
+				span{
+					font-size: $default-font-size /2;
+				}
 
-	
-	
+			}
+		}
+	}
+
+	.gwmc-menu-container{
+		float: $end;
+		ul{
+			display: block;
+			li{
+				display: inline-block;
+				a{
+					display: block;
+					padding: 20px;
+					color: $theme-white;
+					text-transform: uppercase;
+					font-size: $default-font-size;
+				}
+			}
+		}
+	}
 }
 
 .carousel-container{

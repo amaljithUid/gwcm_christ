@@ -6,6 +6,7 @@
 /*Font*/
 
 $default-font:'Roboto Condensed', sans-serif;
+$default-font-size:1.3em;
 
 /*Theme Colors*/
 
@@ -17,3 +18,9 @@ $theme-red:#ea092a;
 $theme-violet:#a13f95;
 $theme-white:#ffffff;
 $theme-gray:#bbcbd6;
+
+
+/*Theme Floating*/
+
+$begin:left;
+$end:right;

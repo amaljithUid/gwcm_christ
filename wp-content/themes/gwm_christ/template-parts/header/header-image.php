@@ -12,7 +12,7 @@
 <div class="custom-header">
 	
 	<div class="fixed-header">
-		<div class="logo-box">
+		<div class="logo-box clearfix">
 			<a href="#" class="logo-anchor">
 				<img src="<?php echo get_field('Logo_img'); ?>" />
 				<h2>
@@ -21,6 +21,9 @@
 				</h2>
 			</a>
 		</div>
+		
+			<?php wp_nav_menu( array( 'theme_location' => '', 'container_class' => 'gwmc-menu-container' ) ); ?>
+		
 	</div>
 
 	<div class="container-fluid carousel-container">

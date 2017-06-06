@@ -15,6 +15,14 @@ if ( version_compare( $GLOBALS['wp_version'], '4.7-alpha', '<' ) ) {
 	require get_template_directory() . '/inc/back-compat.php';
 	return;
 }
+
+/*
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'gwmc_main_menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+*/
+
 /**
 * Sets up theme defaults and registers support for various WordPress features.
 *
