@@ -10,6 +10,26 @@
 
 ?>
 <div class="custom-header">
+
+
+<!-- <div class="container">
+  <div class="nav">
+    <ul>
+      
+      <li>STYLE 3
+        <ul class="drop-menu menu-3">
+          <li>ONE</li>
+          <li>TWO</li>
+          <li>THREE</li>
+          <li>FOUR</li>
+          <li>FIVE</li>
+          <li>SIX</li>
+        </ul>
+      </li>
+      
+    </ul>
+  </div>
+</div> -->
 	
 	<div class="fixed-header">
 		<div class="logo-box clearfix">
@@ -21,8 +41,28 @@
 				</h2>
 			</a>
 		</div>
-		
-			<?php wp_nav_menu( array( 'theme_location' => '', 'container_class' => 'gwmc-menu-container' ) ); ?>
+			<div class="gwmc-menu-container">
+				<?php wp_nav_menu( array( 'theme_location' => '', 'container_class' => '' ) ); ?>
+				<ul class="smedia-menu">
+					<li>
+						<a href="#" class="smedia-share"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+						<ul class="smedia-menu-item">
+							<li>
+								<a href="" class="smedia-share"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+							</li>
+							<li>
+								<a href="" class="smedia-share"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a>
+							</li>
+							<li>
+								<a href="" class="smedia-share"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+							</li>
+							<li>
+								<a href="" class="smedia-share"><i class="fa fa-youtube" aria-hidden="true"></i><span>Youtube</span></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
 		
 	</div>
 

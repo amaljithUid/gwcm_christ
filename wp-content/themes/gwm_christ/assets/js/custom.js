@@ -8,14 +8,24 @@ function setCarousel() {
 }
 
 
+
+
 $(document).ready(function() {
     setCarousel();
-
+    $('ul.menu').each(function() {
+        $(this).find('li:last-child').after('');
+    });
 });
+
 $(window).resize(function() {
     setCarousel();
 
 });
+
+$(document).on("click", ".smedia-share", function(e) {
+    //alert('item');
+    $(this).parent().parent('ul').toggleClass('opened');
+})
 
 
 (function($) {

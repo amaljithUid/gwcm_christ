@@ -34,8 +34,9 @@
 
 	.gwmc-menu-container{
 		float: $end;
+		display: table;
 		ul{
-			display: block;
+			display: inline-block;
 			li{
 				display: inline-block;
 				a{
@@ -43,10 +44,71 @@
 					padding: 20px;
 					color: $theme-white;
 					text-transform: uppercase;
-					font-size: $default-font-size;
+					font-size: $default-font-size - .3;
+					font-weight: $default-font-weight;
 				}
 			}
 		}
+		.menu-gwmc_main_menu-container{display: table-cell;float:$begin}
+		ul.smedia-menu{
+			float: $end;
+			display: table-cell;
+			position: relative;
+			.smedia-share{
+				display: inline-block;
+			}
+			ul{
+				display: none;
+				background-color: $theme-white;
+				@include border-radius(4px, 4px);
+				padding: 20px;
+				position: absolute;
+				top: 120%;
+				right: 0px;
+				width: 160px;
+				&:before{
+					content: '';
+					position: absolute;
+					width: 10px;
+					height: 10px;
+					background-color: $theme-white;
+					top: -5px;
+					right: 26.5px;
+					@include transform(rotate(#{$deg * 9}deg));
+
+				}
+				li{
+					display: block;
+					a{
+						padding: 10px;
+						display: block $default;
+						border-radius:inherit $default;
+						i.fa{
+							font-size: $default-font-size;
+							display: inline-block;
+							float: left;
+							margin-right: 8px;
+
+						}
+						span{
+							font-size: $default-font-size - .5;
+						}
+					}
+				}
+			}
+
+			&.opened{
+				.smedia-share{
+					background-color: $theme-white;
+					color: $dark-blue;
+					@include border-radius(4px, 4px);
+				}
+				ul{
+					display: block;
+				}
+			}
+		}
+		
 	}
 }
 
