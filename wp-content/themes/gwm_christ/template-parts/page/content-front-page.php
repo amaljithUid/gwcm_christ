@@ -9,6 +9,9 @@
  */
 
 ?>
+
+<?php get_template_part( 'template-parts/sections/welcome', 'intro' ); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'twentyseventeen-panel ' ); ?> >
 
 	<?php if ( has_post_thumbnail() ) :

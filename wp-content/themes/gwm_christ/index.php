@@ -17,6 +17,8 @@
 
 get_header(); ?>
 
+
+
 <div class="wrap">
 	<?php if ( is_home() && ! is_front_page() ) : ?>
 		<header class="page-header">
@@ -30,6 +32,8 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+
+		<?php get_template_part( 'template-parts/sections/welcome', 'intro' ); ?>
 
 			<?php
 			if ( have_posts() ) :

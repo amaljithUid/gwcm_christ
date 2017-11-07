@@ -117,3 +117,29 @@
 	top: 0px;
 	z-index: 9;
 }
+
+.welcome-intro{
+	padding: $default-pad-marg*6 $null;
+	background-color: $heavy-dark-blue;
+	h2{
+		font-family: $default-font;
+		font-size: $default-font-size*2;
+		font-weight: $default-font-weight;
+		color: $theme-yellow;
+		text-align: center;
+		margin-bottom: $default-pad-marg;
+		
+	}
+
+	p{
+		font-family: $default-font;
+		font-size: $default-font-size;
+		font-weight: $default-font-weight;
+		color: $theme-white;
+		text-align: center;
+		max-width: $width*3;
+		margin:$null auto;
+		display: block;
+
+	}
+}

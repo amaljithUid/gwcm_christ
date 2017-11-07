@@ -3,6 +3,8 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Molle:400i";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 /* line 5, ../../../../../../../../Users/Amal/Desktop/compass.app/lib/ruby/compass_1.0/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -76,6 +78,1520 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /*Theme Colors*/
 /*Theme Floating*/
 /*Tranform*/
+/*Grid*/
+/* line 1, ../sass/_theme/_theme.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  display: table;
+}
+
+/* line 8, ../sass/_theme/_theme.scss */
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.3;
+}
+
+/* line 14, ../sass/_theme/_theme.scss */
+a, a:focus, a:hover {
+  text-decoration: none;
+}
+
+/* line 18, ../sass/_theme/_theme.scss */
+.inheritall, .item .carousel-caption {
+  all: unset;
+}
+
+/* line 22, ../sass/_theme/_theme.scss */
+.vh-center, .item .carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 29, ../sass/_theme/_theme.scss */
+.h-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* line 36, ../sass/_theme/_theme.scss */
+ul.theme-strip {
+  display: table;
+  border-bottom: thin solid rgba(255, 255, 255, 0.2);
+  padding: 0 3.3333333333em;
+  margin: 0 auto;
+}
+/* line 41, ../sass/_theme/_theme.scss */
+ul.theme-strip li {
+  display: table-cell;
+  width: 0.2285714286em;
+  height: 0.2285714286em;
+}
+/* line 45, ../sass/_theme/_theme.scss */
+ul.theme-strip li:nth-child(1) {
+  background-color: #054892;
+}
+/* line 48, ../sass/_theme/_theme.scss */
+ul.theme-strip li:nth-child(2) {
+  background-color: #0097d9;
+}
+/* line 51, ../sass/_theme/_theme.scss */
+ul.theme-strip li:nth-child(3) {
+  background-color: #a13f95;
+}
+/* line 54, ../sass/_theme/_theme.scss */
+ul.theme-strip li:nth-child(4) {
+  background-color: #ea092a;
+}
+/* line 57, ../sass/_theme/_theme.scss */
+ul.theme-strip li:nth-child(5) {
+  background-color: #ff7d03;
+}
+/* line 60, ../sass/_theme/_theme.scss */
+ul.theme-strip li:nth-child(6) {
+  background-color: #ffdc00;
+}
+
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2017 Daniel Eden
+ */
+/* line 11, ../sass/_components/_animation.scss */
+.animated, .item.active .carousel-caption h3, .item.active .carousel-caption h2, .item.active .carousel-caption h5 {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* line 16, ../sass/_components/_animation.scss */
+.animated.infinite, .item.active .carousel-caption h3.infinite, .item.active .carousel-caption h2.infinite, .item.active .carousel-caption h5.infinite {
+  animation-iteration-count: infinite;
+}
+
+/* line 20, ../sass/_components/_animation.scss */
+.animated.hinge, .item.active .carousel-caption h3.hinge, .item.active .carousel-caption h2.hinge, .item.active .carousel-caption h5.hinge {
+  animation-duration: 2s;
+}
+
+/* line 24, ../sass/_components/_animation.scss */
+.animated.flipOutX, .item.active .carousel-caption h3.flipOutX, .item.active .carousel-caption h2.flipOutX, .item.active .carousel-caption h5.flipOutX,
+.animated.flipOutY,
+.item.active .carousel-caption h3.flipOutY,
+.item.active .carousel-caption h2.flipOutY,
+.item.active .carousel-caption h5.flipOutY,
+.animated.bounceIn,
+.item.active .carousel-caption h3,
+.item.active .carousel-caption h2.bounceIn,
+.item.active .carousel-caption h5,
+.animated.bounceOut,
+.item.active .carousel-caption h3.bounceOut,
+.item.active .carousel-caption h2.bounceOut,
+.item.active .carousel-caption h5.bounceOut {
+  animation-duration: .75s;
+}
+
+@keyframes bounce {
+  from, 20%, 53%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+/* line 52, ../sass/_components/_animation.scss */
+.bounce {
+  animation-name: bounce;
+  transform-origin: center bottom;
+}
+
+@keyframes flash {
+  from, 50%, to {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+/* line 67, ../sass/_components/_animation.scss */
+.flash {
+  animation-name: flash;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* line 87, ../sass/_components/_animation.scss */
+.pulse {
+  animation-name: pulse;
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* line 121, ../sass/_components/_animation.scss */
+.rubberBand {
+  animation-name: rubberBand;
+}
+
+@keyframes shake {
+  from, to {
+    transform: translate3d(0, 0, 0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0);
+  }
+}
+/* line 139, ../sass/_components/_animation.scss */
+.shake {
+  animation-name: shake;
+}
+
+@keyframes headShake {
+  0% {
+    transform: translateX(0);
+  }
+  6.5% {
+    transform: translateX(-6px) rotateY(-9deg);
+  }
+  18.5% {
+    transform: translateX(5px) rotateY(7deg);
+  }
+  31.5% {
+    transform: translateX(-3px) rotateY(-5deg);
+  }
+  43.5% {
+    transform: translateX(2px) rotateY(3deg);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+/* line 169, ../sass/_components/_animation.scss */
+.headShake {
+  animation-timing-function: ease-in-out;
+  animation-name: headShake;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+/* line 196, ../sass/_components/_animation.scss */
+.swing {
+  transform-origin: top center;
+  animation-name: swing;
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* line 223, ../sass/_components/_animation.scss */
+.tada {
+  animation-name: tada;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes wobble {
+  from {
+    transform: none;
+  }
+  15% {
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+  30% {
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+  45% {
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+  60% {
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+  75% {
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+  to {
+    transform: none;
+  }
+}
+/* line 259, ../sass/_components/_animation.scss */
+.wobble {
+  animation-name: wobble;
+}
+
+@keyframes jello {
+  from, 11.1%, to {
+    transform: none;
+  }
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+  77.7% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+  88.8% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}
+/* line 297, ../sass/_components/_animation.scss */
+.jello {
+  animation-name: jello;
+  transform-origin: center;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+/* line 335, ../sass/_components/_animation.scss */
+.bounceIn, .item.active .carousel-caption h3, .item.active .carousel-caption h5 {
+  animation-name: bounceIn;
+}
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+/* line 367, ../sass/_components/_animation.scss */
+.bounceInDown {
+  animation-name: bounceInDown;
+}
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+/* line 399, ../sass/_components/_animation.scss */
+.bounceInLeft {
+  animation-name: bounceInLeft;
+}
+
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+/* line 431, ../sass/_components/_animation.scss */
+.bounceInRight {
+  animation-name: bounceInRight;
+}
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 463, ../sass/_components/_animation.scss */
+.bounceInUp {
+  animation-name: bounceInUp;
+}
+
+@keyframes bounceOut {
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+  50%, 55% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+}
+/* line 483, ../sass/_components/_animation.scss */
+.bounceOut {
+  animation-name: bounceOut;
+}
+
+@keyframes bounceOutDown {
+  20% {
+    transform: translate3d(0, 10px, 0);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+/* line 503, ../sass/_components/_animation.scss */
+.bounceOutDown {
+  animation-name: bounceOutDown;
+}
+
+@keyframes bounceOutLeft {
+  20% {
+    opacity: 1;
+    transform: translate3d(20px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+/* line 519, ../sass/_components/_animation.scss */
+.bounceOutLeft {
+  animation-name: bounceOutLeft;
+}
+
+@keyframes bounceOutRight {
+  20% {
+    opacity: 1;
+    transform: translate3d(-20px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+/* line 535, ../sass/_components/_animation.scss */
+.bounceOutRight {
+  animation-name: bounceOutRight;
+}
+
+@keyframes bounceOutUp {
+  20% {
+    transform: translate3d(0, -10px, 0);
+  }
+  40%, 45% {
+    opacity: 1;
+    transform: translate3d(0, 20px, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+/* line 555, ../sass/_components/_animation.scss */
+.bounceOutUp {
+  animation-name: bounceOutUp;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 569, ../sass/_components/_animation.scss */
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 585, ../sass/_components/_animation.scss */
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 601, ../sass/_components/_animation.scss */
+.fadeInDownBig {
+  animation-name: fadeInDownBig;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 617, ../sass/_components/_animation.scss */
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInLeftBig {
+  from {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 633, ../sass/_components/_animation.scss */
+.fadeInLeftBig {
+  animation-name: fadeInLeftBig;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 649, ../sass/_components/_animation.scss */
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeInRightBig {
+  from {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 665, ../sass/_components/_animation.scss */
+.fadeInRightBig {
+  animation-name: fadeInRightBig;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 681, ../sass/_components/_animation.scss */
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 697, ../sass/_components/_animation.scss */
+.fadeInUpBig {
+  animation-name: fadeInUpBig;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* line 711, ../sass/_components/_animation.scss */
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+/* line 726, ../sass/_components/_animation.scss */
+.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+@keyframes fadeOutDownBig {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+/* line 741, ../sass/_components/_animation.scss */
+.fadeOutDownBig {
+  animation-name: fadeOutDownBig;
+}
+
+@keyframes fadeOutLeft {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+/* line 756, ../sass/_components/_animation.scss */
+.fadeOutLeft {
+  animation-name: fadeOutLeft;
+}
+
+@keyframes fadeOutLeftBig {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, 0, 0);
+  }
+}
+/* line 771, ../sass/_components/_animation.scss */
+.fadeOutLeftBig {
+  animation-name: fadeOutLeftBig;
+}
+
+@keyframes fadeOutRight {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+/* line 786, ../sass/_components/_animation.scss */
+.fadeOutRight {
+  animation-name: fadeOutRight;
+}
+
+@keyframes fadeOutRightBig {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, 0, 0);
+  }
+}
+/* line 801, ../sass/_components/_animation.scss */
+.fadeOutRightBig {
+  animation-name: fadeOutRightBig;
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+/* line 816, ../sass/_components/_animation.scss */
+.fadeOutUp {
+  animation-name: fadeOutUp;
+}
+
+@keyframes fadeOutUpBig {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+/* line 831, ../sass/_components/_animation.scss */
+.fadeOutUpBig {
+  animation-name: fadeOutUpBig;
+}
+
+@keyframes flip {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    animation-timing-function: ease-out;
+  }
+  40% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    animation-timing-function: ease-in;
+  }
+  80% {
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    animation-timing-function: ease-in;
+  }
+  to {
+    transform: perspective(400px);
+    animation-timing-function: ease-in;
+  }
+}
+/* line 862, ../sass/_components/_animation.scss */
+.animated.flip, .item.active .carousel-caption h3.flip, .item.active .carousel-caption h2.flip, .item.active .carousel-caption h5.flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  animation-name: flip;
+}
+
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+/* line 894, ../sass/_components/_animation.scss */
+.flipInX, .item.active .carousel-caption h2 {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipInX;
+}
+
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+/* line 926, ../sass/_components/_animation.scss */
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipInY;
+}
+
+@keyframes flipOutX {
+  from {
+    transform: perspective(400px);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+/* line 948, ../sass/_components/_animation.scss */
+.flipOutX {
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+}
+
+@keyframes flipOutY {
+  from {
+    transform: perspective(400px);
+  }
+  30% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+    opacity: 1;
+  }
+  to {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    opacity: 0;
+  }
+}
+/* line 970, ../sass/_components/_animation.scss */
+.flipOutY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: flipOutY;
+}
+
+@keyframes lightSpeedIn {
+  from {
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+  60% {
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+  80% {
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+/* line 998, ../sass/_components/_animation.scss */
+.lightSpeedIn {
+  animation-name: lightSpeedIn;
+  animation-timing-function: ease-out;
+}
+
+@keyframes lightSpeedOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(100%, 0, 0) skewX(30deg);
+    opacity: 0;
+  }
+}
+/* line 1014, ../sass/_components/_animation.scss */
+.lightSpeedOut {
+  animation-name: lightSpeedOut;
+  animation-timing-function: ease-in;
+}
+
+@keyframes rotateIn {
+  from {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -200deg);
+    opacity: 0;
+  }
+  to {
+    transform-origin: center;
+    transform: none;
+    opacity: 1;
+  }
+}
+/* line 1033, ../sass/_components/_animation.scss */
+.rotateIn {
+  animation-name: rotateIn;
+}
+
+@keyframes rotateInDownLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+  to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1;
+  }
+}
+/* line 1051, ../sass/_components/_animation.scss */
+.rotateInDownLeft {
+  animation-name: rotateInDownLeft;
+}
+
+@keyframes rotateInDownRight {
+  from {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+  to {
+    transform-origin: right bottom;
+    transform: none;
+    opacity: 1;
+  }
+}
+/* line 1069, ../sass/_components/_animation.scss */
+.rotateInDownRight {
+  animation-name: rotateInDownRight;
+}
+
+@keyframes rotateInUpLeft {
+  from {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+  to {
+    transform-origin: left bottom;
+    transform: none;
+    opacity: 1;
+  }
+}
+/* line 1087, ../sass/_components/_animation.scss */
+.rotateInUpLeft {
+  animation-name: rotateInUpLeft;
+}
+
+@keyframes rotateInUpRight {
+  from {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  }
+  to {
+    transform-origin: right bottom;
+    transform: none;
+    opacity: 1;
+  }
+}
+/* line 1105, ../sass/_components/_animation.scss */
+.rotateInUpRight {
+  animation-name: rotateInUpRight;
+}
+
+@keyframes rotateOut {
+  from {
+    transform-origin: center;
+    opacity: 1;
+  }
+  to {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, 200deg);
+    opacity: 0;
+  }
+}
+/* line 1122, ../sass/_components/_animation.scss */
+.rotateOut {
+  animation-name: rotateOut;
+}
+
+@keyframes rotateOutDownLeft {
+  from {
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+  to {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, 45deg);
+    opacity: 0;
+  }
+}
+/* line 1139, ../sass/_components/_animation.scss */
+.rotateOutDownLeft {
+  animation-name: rotateOutDownLeft;
+}
+
+@keyframes rotateOutDownRight {
+  from {
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+  to {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+/* line 1156, ../sass/_components/_animation.scss */
+.rotateOutDownRight {
+  animation-name: rotateOutDownRight;
+}
+
+@keyframes rotateOutUpLeft {
+  from {
+    transform-origin: left bottom;
+    opacity: 1;
+  }
+  to {
+    transform-origin: left bottom;
+    transform: rotate3d(0, 0, 1, -45deg);
+    opacity: 0;
+  }
+}
+/* line 1173, ../sass/_components/_animation.scss */
+.rotateOutUpLeft {
+  animation-name: rotateOutUpLeft;
+}
+
+@keyframes rotateOutUpRight {
+  from {
+    transform-origin: right bottom;
+    opacity: 1;
+  }
+  to {
+    transform-origin: right bottom;
+    transform: rotate3d(0, 0, 1, 90deg);
+    opacity: 0;
+  }
+}
+/* line 1190, ../sass/_components/_animation.scss */
+.rotateOutUpRight {
+  animation-name: rotateOutUpRight;
+}
+
+@keyframes hinge {
+  0% {
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  20%, 60% {
+    transform: rotate3d(0, 0, 1, 80deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+  }
+  40%, 80% {
+    transform: rotate3d(0, 0, 1, 60deg);
+    transform-origin: top left;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+/* line 1219, ../sass/_components/_animation.scss */
+.hinge {
+  animation-name: hinge;
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(3deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* line 1244, ../sass/_components/_animation.scss */
+.jackInTheBox {
+  animation-name: jackInTheBox;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes rollIn {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* line 1262, ../sass/_components/_animation.scss */
+.rollIn {
+  animation-name: rollIn;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+@keyframes rollOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+  }
+}
+/* line 1279, ../sass/_components/_animation.scss */
+.rollOut {
+  animation-name: rollOut;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+/* line 1294, ../sass/_components/_animation.scss */
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+@keyframes zoomInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+/* line 1312, ../sass/_components/_animation.scss */
+.zoomInDown {
+  animation-name: zoomInDown;
+}
+
+@keyframes zoomInLeft {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+/* line 1330, ../sass/_components/_animation.scss */
+.zoomInLeft {
+  animation-name: zoomInLeft;
+}
+
+@keyframes zoomInRight {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+/* line 1348, ../sass/_components/_animation.scss */
+.zoomInRight {
+  animation-name: zoomInRight;
+}
+
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+/* line 1366, ../sass/_components/_animation.scss */
+.zoomInUp {
+  animation-name: zoomInUp;
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* line 1385, ../sass/_components/_animation.scss */
+.zoomOut {
+  animation-name: zoomOut;
+}
+
+@keyframes zoomOutDown {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+/* line 1404, ../sass/_components/_animation.scss */
+.zoomOutDown {
+  animation-name: zoomOutDown;
+}
+
+@keyframes zoomOutLeft {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(42px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.1) translate3d(-2000px, 0, 0);
+    transform-origin: left center;
+  }
+}
+/* line 1421, ../sass/_components/_animation.scss */
+.zoomOutLeft {
+  animation-name: zoomOutLeft;
+}
+
+@keyframes zoomOutRight {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(-42px, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.1) translate3d(2000px, 0, 0);
+    transform-origin: right center;
+  }
+}
+/* line 1438, ../sass/_components/_animation.scss */
+.zoomOutRight {
+  animation-name: zoomOutRight;
+}
+
+@keyframes zoomOutUp {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+/* line 1457, ../sass/_components/_animation.scss */
+.zoomOutUp {
+  animation-name: zoomOutUp;
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 1472, ../sass/_components/_animation.scss */
+.slideInDown {
+  animation-name: slideInDown;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 1487, ../sass/_components/_animation.scss */
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 1502, ../sass/_components/_animation.scss */
+.slideInRight {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+/* line 1517, ../sass/_components/_animation.scss */
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+/* line 1532, ../sass/_components/_animation.scss */
+.slideOutDown {
+  animation-name: slideOutDown;
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+/* line 1547, ../sass/_components/_animation.scss */
+.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+/* line 1562, ../sass/_components/_animation.scss */
+.slideOutRight {
+  animation-name: slideOutRight;
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+/* line 1577, ../sass/_components/_animation.scss */
+.slideOutUp {
+  animation-name: slideOutUp;
+}
+
 /* line 2, ../sass/_components/_carousel.scss */
 .carousel, .carousel-inner {
   height: 100%;
@@ -90,32 +1606,104 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .carousel-control.right, .carousel-control.left {
   background-image: none;
 }
+/* line 13, ../sass/_components/_carousel.scss */
+.carousel-control.right i.fa, .carousel-control.left i.fa {
+  margin-top: 0;
+  font-family: "FontAwesome";
+  width: 30px;
+  height: 30px;
+  margin-top: -10px;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
 
-/* line 16, ../sass/_components/_carousel.scss */
+/* line 28, ../sass/_components/_carousel.scss */
 .carousel .item {
-  min-height: 100vh;
+  /* min-height: 100vh;*/
   height: 100%;
   width: 100%;
   background-position-x: center;
   background-position-y: top;
   background-size: cover;
+  background-attachment: fixed;
 }
 
-/* line 25, ../sass/_components/_carousel.scss */
-.carousel-caption h3, .carousel .icon-container {
-  background-color: #09c;
-}
-
-/* line 30, ../sass/_components/_carousel.scss */
+/* line 39, ../sass/_components/_carousel.scss */
 .carousel-caption button {
   background-color: #09c;
 }
-/* line 33, ../sass/_components/_carousel.scss */
+/* line 42, ../sass/_components/_carousel.scss */
+.carousel-caption h2 {
+  color: #ffffff;
+  font-size: 13em;
+  text-align: center;
+  padding: 0;
+  font-family: "Molle", cursive;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px;
+}
+/* line 51, ../sass/_components/_carousel.scss */
 .carousel-caption h3 {
-  padding: .5em;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffffff;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.5em;
+  border: 1px solid #ffffff;
+  -moz-border-radius: 4px / 4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px / 4px;
+  display: table;
+  margin-left: 10em;
+  margin-bottom: -3em;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px;
+}
+/* line 65, ../sass/_components/_carousel.scss */
+.carousel-caption h5 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffffff;
+  font-size: 1.3em -0.2;
+  text-align: center;
+  padding: 0.5em;
+  border: 1px solid #ffffff;
+  -moz-border-radius: 4px / 4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px / 4px;
+  display: table;
+  margin: 0 auto;
+  max-width: 30em;
+  margin-top: -3em;
+  padding-top: 2em;
+  text-shadow: rgba(0, 0, 0, 0.5) 0px 1px 1px;
+  position: relative;
+}
+/* line 80, ../sass/_components/_carousel.scss */
+.carousel-caption h5 b {
+  float: right;
+  font-style: italic;
+  font-family: Georgia;
+}
+/* line 85, ../sass/_components/_carousel.scss */
+.carousel-caption h5:before {
+  content: "\f10d";
+  font-family: "FontAwesome";
+  color: #000000;
+  position: absolute;
+  top: -1em;
+  left: 0.5em;
+  padding: 0.5em;
+  background-color: #ffffff;
+  -moz-border-radius: 4px / 4px;
+  -webkit-border-radius: 4px 4px;
+  border-radius: 4px / 4px;
+  vertical-align: middle;
+  text-shadow: none;
 }
 
-/* line 38, ../sass/_components/_carousel.scss */
+/* line 102, ../sass/_components/_carousel.scss */
 .carousel .icon-container {
   display: inline-block;
   font-size: 25px;
@@ -125,31 +1713,56 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   border-radius: 50%;
 }
 
-/* line 48, ../sass/_components/_carousel.scss */
-.carousel-caption button {
-  border-color: #00bfff;
-  margin-top: 1em;
+/*.carousel-caption {
+  
+  button {
+    border-color: #00bfff;
+    margin-top: 1em;
+  }
+  h3 {
+    &:first-child {
+      animation-delay: 1s;
+    }
+    &:nth-child(2) {
+      animation-delay: 2s;
+    }
+  }
+  button {
+    animation-delay: 3s;
+  }
+}*/
+/* Animation delays */
+/* line 133, ../sass/_components/_carousel.scss */
+.item .carousel-caption {
+  opacity: 0;
 }
-/* line 53, ../sass/_components/_carousel.scss */
-.carousel-caption h3:first-child {
-  animation-delay: 1s;
+/* line 137, ../sass/_components/_carousel.scss */
+.item .carousel-caption h3 {
+  opacity: 0;
 }
-/* line 56, ../sass/_components/_carousel.scss */
-.carousel-caption h3:nth-child(2) {
-  animation-delay: 2s;
+/* line 143, ../sass/_components/_carousel.scss */
+.item.active .carousel-caption {
+  opacity: 1;
 }
-/* line 60, ../sass/_components/_carousel.scss */
-.carousel-caption button {
-  animation-delay: 3s;
+/* line 145, ../sass/_components/_carousel.scss */
+.item.active .carousel-caption h3 {
+  animation-delay: 1.2s;
+}
+/* line 151, ../sass/_components/_carousel.scss */
+.item.active .carousel-caption h2 {
+  animation-delay: .5s;
+}
+/* line 156, ../sass/_components/_carousel.scss */
+.item.active .carousel-caption h5 {
+  animation-delay: 1.5s;
 }
 
-/* Animation delays */
-/* line 68, ../sass/_components/_carousel.scss */
+/* line 167, ../sass/_components/_carousel.scss */
 .p {
   padding-top: 125px;
   text-align: center;
 }
-/* line 71, ../sass/_components/_carousel.scss */
+/* line 170, ../sass/_components/_carousel.scss */
 .p a {
   text-decoration: underline;
 }
@@ -297,13 +1910,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   z-index: 9;
 }
 
-/* line 2, ../sass/_theme/_theme.scss */
-body {
-  font-family: "Roboto Condensed", sans-serif;
-  line-height: 1.3;
+/* line 121, ../sass/_theme/_layout.scss */
+.welcome-intro {
+  padding: 6em 0;
+  background-color: #151450;
 }
-
-/* line 7, ../sass/_theme/_theme.scss */
-a, a:focus, a:hover {
-  text-decoration: none;
+/* line 124, ../sass/_theme/_layout.scss */
+.welcome-intro h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 2.6em;
+  font-weight: 300;
+  color: #ffdc00;
+  text-align: center;
+  margin-bottom: 1em;
+}
+/* line 134, ../sass/_theme/_layout.scss */
+.welcome-intro p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  max-width: 30em;
+  margin: 0 auto;
+  display: block;
 }
